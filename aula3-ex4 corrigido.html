@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background:lightgray;
+            text-align:center;
+            margin: 20 30;
+        }
+        h1{
+            text-align:center;
+            color:purple;
+            background:pink;
+
+
+        }
+        table {
+
+            font-family: arial, sans-serif;
+            border: solid 2px purple;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 2px solid purple;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1> Gika Doces</h1>
+    <table>
+        <th>PRODUTO</th>
+        <th>DESCRIÇÃO</th>
+        <th>VALOR</th>
+
+
+        <tr>
+            <td>Brigadeiro</td>
+            <td>tamanho grande - unidade</td>
+            <td>R$ 1,50</td>
+
+        </tr>
+        <tr>
+            <td>Trufa de Maracuja</td>
+            <td>tamanho grande - unidade</td>
+            <td>R$2,00</td>
+
+        </tr>
+        <tr>
+            <td>Beijinho</td>
+            <td>tamanho grande-unidade</td>
+            <td>R$1,50</td>
+
+        </tr>
+        <tr>
+            <td>Torta de limão</td>
+            <td>pedaço grande</td>
+            <td>R$2,50</td>
+
+        </tr>
+        <tr>
+            <td>Cone de nutella</td>
+            <td>tamanho grande - unidade</td>
+            <td>R$ 2,00</td>
+
+        </tr>
+        <tr>
+            <td>Torta Holandesa</td>
+            <td>pedaço grande</td>
+            <td>R$ 2,50</td>
+
+        </tr>
+    </table>
+<h2> Faça seu Pedido </h2>
+
+        <input type="tex" placeholder="digite o produto" id="nomeproduto">
+        <input type="text" placeholder="digite o valor" id="valorproduto">
+
+<button onclick="confirmaproduto();"> Pedir </button>
+
+<script>
+
+
+    function confirmaproduto () {
+
+    var nprod = document.getElementById("nomeproduto").value;
+    var vprod = document.getElementById("valorproduto").value;
+
+    var confirmacao = confirm ("deseja finalizar a compra?")
+
+    if (confirmacao == true) {
+       alert (nprod + " " + vprod + " compra realizada");
+    } else {
+        alert ("você ainda não comprou nenhum produto");
+    }
+};
+
+</script>
+
+</body>
+</html>
